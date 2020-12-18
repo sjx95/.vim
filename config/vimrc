@@ -1,0 +1,9 @@
+source ~/.vim/config/vimrc.fatih.default
+
+set scrolloff=6
+set rtp+=/usr/local/opt/fzf
+set wildmode=list:longest
+
+nmap tb :TagbarToggle<CR>
+nmap nt :NERDTreeToggle<CR>
+
