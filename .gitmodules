@@ -19,3 +19,6 @@
 [submodule "pack/plugins/start/ctrlp"]
 	path = pack/plugins/start/ctrlp
 	url = https://github.com/ctrlpvim/ctrlp.vim
+[submodule "pack/plugins/start/vim-polyglot"]
+	path = pack/plugins/start/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot
