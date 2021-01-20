@@ -9,6 +9,9 @@ source ~/.vim/config/vimrc.coc.default
 set scrolloff=6
 set rtp+=/usr/local/opt/fzf
 set wildmode=list:longest
+" fold settings
+set foldmethod=syntax
+set foldlevelstart=99
 
 nmap tb :TagbarToggle<CR>
 nmap nt :NERDTreeToggle<CR>
