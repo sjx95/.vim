@@ -75,7 +75,7 @@ colorscheme molokai
 """"""""""""""""""""""
 
 " Set leader shortcut to a comma ','. By default it's the backslash
-let mapleader = ","
+"let mapleader = ","
 
 " Jump to next error with Ctrl-n and previous error with Ctrl-m. Close the
 " quickfix window with <leader>a
