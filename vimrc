@@ -13,6 +13,7 @@ set wildmode=list:longest
 set foldmethod=syntax
 set foldlevelstart=99
 
+set mouse=a
 nmap tb :TagbarToggle<CR>
 nmap nt :NERDTreeToggle<CR>
 
