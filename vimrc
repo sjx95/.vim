@@ -2,6 +2,9 @@
 " this is handled by LanguageClient [LC]
 let g:go_def_mapping_enabled = 0
 
+call plug#begin()
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+call plug#end()
 source ~/.vim/config/vimrc.fatih.default
 
 source ~/.vim/config/vimrc.coc.default
