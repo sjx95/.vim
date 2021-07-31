@@ -1,6 +1,9 @@
 call plug#begin()
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'preservim/nerdtree'
+  Plug 'tpope/vim-fugitive'
+  Plug 'vim-airline/vim-airline'
+  Plug 'preservim/tagbar'
 call plug#end()
 
 " disable vim-go :GoDef short cut (gd)
