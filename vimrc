@@ -14,8 +14,11 @@ call plug#end()
 let g:go_def_mapping_enabled = 0
 
 let g:coc_global_extensions = []
-let g:coc_global_extensions += ['coc-go', 'coc-clangd', 'coc-sh', 'coc-json', 'coc-yaml']
+let g:coc_global_extensions += ['coc-go', 'coc-clangd', 'coc-sh', 'coc-vimlsp']
 let g:coc_global_extensions += ['coc-protobuf', 'coc-thrift-syntax-support']
+let g:coc_global_extensions += ['coc-json', 'coc-yaml']
+let g:coc_global_extensions += ['coc-cmake']
+let g:coc_global_extensions += ['coc-fzf-preview', 'coc-snippets']
 
 source ~/.vim/config/vimrc.fatih.default
 
