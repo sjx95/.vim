@@ -27,10 +27,9 @@ source ~/.vim/config/vimrc.coc.default
 set scrolloff=6
 set rtp+=/usr/local/opt/fzf
 set wildmode=list:longest
-
 " fold settings
-"set foldmethod=syntax
-"set foldlevelstart=99
+set foldmethod=syntax
+set foldlevelstart=99
 
 set mouse=a
 nmap tb :TagbarToggle<CR>
