@@ -6,6 +6,7 @@ call plug#begin()
   Plug 'vim-airline/vim-airline'
   Plug 'preservim/tagbar'
   Plug 'kien/ctrlp.vim'
+  Plug 'junegunn/fzf'
   Plug 'junegunn/fzf.vim'
 call plug#end()
 
