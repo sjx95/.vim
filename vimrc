@@ -1,10 +1,12 @@
 call plug#begin()
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'fatih/vim-go'
+  Plug 'sebdah/vim-delve'
   Plug 'preservim/nerdtree'
   Plug 'tpope/vim-fugitive'
   Plug 'vim-airline/vim-airline'
   Plug 'preservim/tagbar'
+  Plug 'preservim/vimux'
   Plug 'kien/ctrlp.vim'
   Plug 'junegunn/fzf'
   Plug 'junegunn/fzf.vim'
