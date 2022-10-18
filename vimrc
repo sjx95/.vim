@@ -21,7 +21,7 @@ call plug#begin()
   "Plug 'sonph/onehalf', { 'rtp': 'vim' }
 call plug#end()
 
-" color scheme and true color
+" color scheme, true color and mouse
 set termguicolors
 colorscheme dracula
 "let g:airline_theme='dracula'
@@ -40,14 +40,18 @@ let g:coc_global_extensions += ['coc-fzf-preview', 'coc-snippets']
 source ~/.vim/config/vimrc.coc.default
 source ~/.vim/config/vimrc.fatih.default
 
+" other settings
+set mouse=a
 set scrolloff=6
 set rtp+=/usr/local/opt/fzf
 set wildmode=list:longest
+set tabstop=4 shiftwidth=4
+
 " fold settings
 set foldmethod=syntax
 set foldlevelstart=99
 
-set mouse=a
+" shortcuts
 nmap tb :TagbarToggle<CR>
 nmap nt :NERDTreeToggle<CR>
 
