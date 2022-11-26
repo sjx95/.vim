@@ -45,7 +45,10 @@ set mouse=a
 set scrolloff=6
 set rtp+=/usr/local/opt/fzf
 set wildmode=list:longest
+
 set tabstop=4 shiftwidth=4
+autocmd FileType javascriptreact setlocal et sta sw=2 sts=2
+autocmd FileType typescriptreact setlocal et sta sw=2 sts=2
 
 " fold settings
 set foldmethod=syntax
