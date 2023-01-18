@@ -47,6 +47,8 @@ set rtp+=/usr/local/opt/fzf
 set wildmode=list:longest
 
 set tabstop=4 shiftwidth=4
+autocmd FileType javascript setlocal et sta sw=2 sts=2
+autocmd FileType typescript setlocal et sta sw=2 sts=2
 autocmd FileType javascriptreact setlocal et sta sw=2 sts=2
 autocmd FileType typescriptreact setlocal et sta sw=2 sts=2
 
@@ -57,4 +59,4 @@ set foldlevelstart=99
 " shortcuts
 nmap tb :TagbarToggle<CR>
 nmap nt :NERDTreeToggle<CR>
-
+nmap nf :NERDTreeFind<CR>
