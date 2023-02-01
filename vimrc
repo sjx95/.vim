@@ -11,31 +11,23 @@ call plug#begin()
   Plug 'kien/ctrlp.vim'
   Plug 'junegunn/fzf'
   Plug 'junegunn/fzf.vim'
-
-  " color schemes
-  "Plug 'NLKNguyen/papercolor-theme'
-  "Plug 'nanotech/jellybeans.vim'
   Plug 'dracula/vim', { 'as': 'dracula' }
-  "Plug 'cocopon/iceberg.vim'
-  "Plug 'morhetz/gruvbox'
-  "Plug 'sonph/onehalf', { 'rtp': 'vim' }
 call plug#end()
 
-" color scheme, true color and mouse
+" color scheme, true color
 set termguicolors
 colorscheme dracula
-"let g:airline_theme='dracula'
 
 " disable vim-go :GoDef short cut (gd)
 " this is handled by LanguageClient [LC]
 let g:go_def_mapping_enabled = 0
 
 let g:coc_global_extensions = []
-let g:coc_global_extensions += ['coc-go', 'coc-clangd', 'coc-sh', 'coc-vimlsp']
+let g:coc_global_extensions += ['coc-go', 'coc-clangd', 'coc-tsserver', 'coc-sh', 'coc-vimlsp']
 let g:coc_global_extensions += ['coc-protobuf', 'coc-thrift-syntax-support']
-let g:coc_global_extensions += ['coc-json', 'coc-yaml']
+let g:coc_global_extensions += ['coc-json', 'coc-yaml', 'coc-html']
 let g:coc_global_extensions += ['coc-cmake']
-let g:coc_global_extensions += ['coc-fzf-preview', 'coc-snippets']
+let g:coc_global_extensions += ['coc-lists', 'coc-marketplace', 'coc-fzf-preview', 'coc-snippets']
 
 source ~/.vim/config/vimrc.coc.default
 source ~/.vim/config/vimrc.fatih.default
@@ -46,6 +38,7 @@ set scrolloff=6
 set rtp+=/usr/local/opt/fzf
 set wildmode=list:longest
 
+" tab settings
 set tabstop=4 shiftwidth=4
 autocmd FileType javascript setlocal et sta sw=2 sts=2
 autocmd FileType typescript setlocal et sta sw=2 sts=2
