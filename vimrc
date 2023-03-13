@@ -22,6 +22,7 @@ colorscheme dracula
 " this is handled by LanguageClient [LC]
 let g:go_def_mapping_enabled = 0
 let g:go_gopls_enabled = 0
+autocmd FileType go let b:go_fmt_options = {'goimports': '-local ' . trim(system('cd '. shellescape(expand('%:p:h')) .' && go list -m'))}
 
 let g:coc_global_extensions = []
 let g:coc_global_extensions += ['coc-go', 'coc-clangd', 'coc-tsserver', 'coc-sh', 'coc-vimlsp']
