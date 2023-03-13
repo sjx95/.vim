@@ -21,6 +21,7 @@ colorscheme dracula
 " disable vim-go :GoDef short cut (gd)
 " this is handled by LanguageClient [LC]
 let g:go_def_mapping_enabled = 0
+let g:go_gopls_enabled = 0
 
 let g:coc_global_extensions = []
 let g:coc_global_extensions += ['coc-go', 'coc-clangd', 'coc-tsserver', 'coc-sh', 'coc-vimlsp']
