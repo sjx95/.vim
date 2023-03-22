@@ -42,6 +42,7 @@ set wildmode=list:longest
 
 " tab settings
 set tabstop=4 shiftwidth=4
+autocmd FileType c,cpp setlocal et sta sw=2 sts=2
 autocmd FileType javascript setlocal et sta sw=2 sts=2
 autocmd FileType typescript setlocal et sta sw=2 sts=2
 autocmd FileType javascriptreact setlocal et sta sw=2 sts=2
