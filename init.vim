@@ -12,6 +12,7 @@ call plug#begin()
   Plug 'junegunn/fzf'
   Plug 'junegunn/fzf.vim'
   Plug 'dracula/vim', { 'as': 'dracula' }
+  Plug 'tomasr/molokai'
 call plug#end()
 
 " color scheme, true color
@@ -31,8 +32,8 @@ let g:coc_global_extensions += ['coc-json', 'coc-yaml', 'coc-html']
 let g:coc_global_extensions += ['coc-cmake']
 let g:coc_global_extensions += ['coc-lists', 'coc-marketplace', 'coc-fzf-preview', 'coc-snippets']
 
-source ~/.vim/config/vimrc.coc.default
-source ~/.vim/config/vimrc.fatih.default
+source ~/.config/nvim/config/vimrc.coc.default
+source ~/.config/nvim/config/vimrc.fatih.default
 
 " other settings
 set mouse=a
