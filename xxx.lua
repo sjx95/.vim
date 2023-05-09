@@ -1,3 +1,4 @@
+-- init lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -10,43 +11,9 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
-require"lazy".setup({
-	'neovim/nvim-lspconfig',
-	'hrsh7th/cmp-nvim-lsp',
-	'hrsh7th/cmp-buffer',
-	'hrsh7th/cmp-path',
-	'hrsh7th/cmp-cmdline',
-	'hrsh7th/nvim-cmp',
-	'saadparwaiz1/cmp_luasnip',
-	'L3MON4D3/LuaSnip',
 
-	{'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'},
-
- 
-	{'preservim/nerdtree', lazy = false, keys = {
-		{"nt", "<CMD>NERDTreeToggle<CR>", desc = "NERDTreeToggle" },
-		{"nf", "<CMD>NERDTreeFind<CR>", desc = "NERDTreeFind" },
-	}},
-
-	{'preservim/tagbar', lazy = false, keys = {
-		{"tb", "<CMD>TagbarToggle<CR>", desc = "TagbarToggle" },
-	}},
-	'vim-airline/vim-airline',
-	'vim-airline/vim-airline-themes',
-	{'tpope/vim-fugitive', lazy = false },
-	{'kien/ctrlp.vim', lazy = false },
-
-  'junegunn/fzf',
-  'junegunn/fzf.vim',
-   {
-    "dracula/vim",
-    lazy = false, -- make sure we load this during startup if it is your main colorscheme
-    priority = 1000, -- make sure to load this before all the other start plugins
-    config = function() vim.cmd([[colorscheme dracula]])    end,
-  },
-  'tomasr/molokai',
-
-})
+-- load plugins
+require("lazy").setup({ import = "plugins" })
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -85,15 +52,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end, opts)
   end,
 })
-
---local use = require('packer').use
---require('packer').startup(function()
-  --use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
-  --use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
-  --use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
-  --use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
-  --use 'L3MON4D3/LuaSnip' -- Snippets plugin
---end)
 
 -- Add additional capabilities supported by nvim-cmp
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
@@ -154,5 +112,3 @@ cmp.setup {
   },
   preselect = cmp.PreselectMode.None,
 }
-
--- require'nvim-treesitter.configs'.setup {}

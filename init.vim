@@ -1,7 +1,3 @@
-" color scheme, true color
-set termguicolors
-"colorscheme dracula
-
 " disable vim-go :GoDef short cut (gd)
 " this is handled by LanguageClient [LC]
 autocmd FileType go let b:go_fmt_options = {'goimports': '-local ' . trim(system('cd '. shellescape(expand('%:p:h')) .' && go list -m'))}
