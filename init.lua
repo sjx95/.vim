@@ -13,7 +13,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- load plugins
-require("lazy").setup({ import = "plugins" })
+require("lazy").setup({ 'folke/lazy.nvim', { import = "plugins" }, })
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -112,3 +112,5 @@ cmp.setup {
   },
   preselect = cmp.PreselectMode.None,
 }
+
+vim.cmd([[source ~/.config/nvim/xxx.vim]])

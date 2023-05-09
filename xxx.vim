@@ -19,6 +19,3 @@ autocmd FileType javascript,typescript,javascriptreact,typescriptreact
 " fold settings
 set foldmethod=syntax
 set foldlevelstart=99
-
-luafile ~/.config/nvim/xxx.lua
-
