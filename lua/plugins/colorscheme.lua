@@ -4,7 +4,7 @@ local colorschemes = {
 	{ "tomasr/molokai" },
 }
 
--- Activate first colorscheme
+-- Set first colorscheme as activated one
 local main = colorschemes[1]
 main.lazy = false
 main.priority = 1000
