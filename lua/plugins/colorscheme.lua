@@ -8,7 +8,7 @@ local colorschemes = {
 local main = colorschemes[1]
 main.lazy = false
 main.priority = 1000
-main.config = function (plugin, opts)
+main.config = function(plugin, opts)
 	vim.cmd("set termguicolors")
 	vim.cmd("colorscheme " .. plugin.name)
 end
