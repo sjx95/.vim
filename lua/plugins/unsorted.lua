@@ -7,25 +7,16 @@ return {
 	"saadparwaiz1/cmp_luasnip",
 	"L3MON4D3/LuaSnip",
 
-	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate", lazy = false, config = true },
-
 	{
-		"preservim/nerdtree",
-		lazy = false,
-		keys = {
-			{ "nt", "<CMD>NERDTreeToggle<CR>", desc = "NERDTreeToggle" },
-			{ "nf", "<CMD>NERDTreeFind<CR>", desc = "NERDTreeFind" },
+		"nvim-treesitter/nvim-treesitter",
+		build = ":TSUpdate",
+		config = function(_, opts)
+			require('nvim-treesitter.configs').setup(opts)
+		end,
+		opts = {
+			ensure_installed = { "go" },
+			highlight = { enable = true },
 		},
-	},
+	}
 
-	{ "preservim/tagbar", lazy = false, keys = {
-		{ "tb", "<CMD>TagbarToggle<CR>", desc = "TagbarToggle" },
-	} },
-	"vim-airline/vim-airline",
-	"vim-airline/vim-airline-themes",
-	{ "tpope/vim-fugitive", lazy = false },
-	{ "kien/ctrlp.vim", lazy = false },
-
-	"junegunn/fzf",
-	"junegunn/fzf.vim",
 }

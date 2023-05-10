@@ -1,15 +1,18 @@
 return {
 	{
+		"jay-babu/mason-null-ls.nvim",
+		dependencies = { "williamboman/mason.nvim" },
+		opts = {
+			ensure_installed = { 'goimports-reviser' },
+			automatic_installation = false,
+			handlers = {},
+		}
+	},
+	{
 		"jose-elias-alvarez/null-ls.nvim",
-		dependencies = { "nvim-lua/plenary.nvim" },
-		opts = function()
-			local null_ls = require("null-ls")
-			return {
-				sources = {
-					-- null_ls.builtins.formatting.gofmt,
-					null_ls.builtins.formatting.goimports_reviser,
-				},
-			}
-		end,
+		dependencies = { "nvim-lua/plenary.nvim", "jay-babu/mason-null-ls.nvim" },
+		opts = {
+			sources = {},
+		}
 	},
 }

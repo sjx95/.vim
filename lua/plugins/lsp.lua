@@ -1,6 +1,6 @@
 return {
-	"neovim/nvim-lspconfig",
 	{ "williamboman/mason.nvim", build = ":MasonUpdate", config = true },
+	{ "neovim/nvim-lspconfig" },
 	{
 		"williamboman/mason-lspconfig.nvim",
 		dependencies = { "neovim/nvim-lspconfig", "williamboman/mason.nvim" },
@@ -22,7 +22,7 @@ return {
 				"eslint",
 			},
 		},
-		config = function(plugin, opts)
+		config = function(_, opts)
 			require("mason-lspconfig").setup(opts)
 			require("mason-lspconfig").setup_handlers({
 				function(server_name)
