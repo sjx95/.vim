@@ -17,6 +17,13 @@ return {
 			ensure_installed = { "go" },
 			highlight = { enable = true },
 		},
+	},
+	{
+		"RRethy/vim-illuminate",
+		config = function (_, opts)
+			require("illuminate").configure(opts)
+		end,
+		opts = {},
 	}
 
 }
