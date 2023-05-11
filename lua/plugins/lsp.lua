@@ -17,7 +17,7 @@ return {
 				"yamlls",
 				"clangd",
 				"gopls",
-				"golangci_lint_ls",
+--				"golangci_lint_ls",
 				"tsserver",
 				"eslint",
 			},
