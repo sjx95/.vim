@@ -13,24 +13,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- load plugins
-require("lazy").setup({ "folke/lazy.nvim", { import = "plugins" } }, {
-	ui = {
-		icons = {
-			cmd = "⌘",
-			config = "🛠",
-			event = "📅",
-			ft = "📂",
-			init = "⚙",
-			keys = "🗝",
-			plugin = "🔌",
-			runtime = "💻",
-			source = "📄",
-			start = "🚀",
-			task = "📌",
-			lazy = "💤 ",
-		},
-	},
-})
+require("lazy").setup({ "folke/lazy.nvim", { import = "plugins" } })
 
 -- Add additional capabilities supported by nvim-cmp
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
@@ -40,10 +23,10 @@ local lspconfig = require("lspconfig")
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
 local servers = { "clangd", "gopls" }
 for _, lsp in ipairs(servers) do
---	lspconfig[lsp].setup({
---		-- on_attach = my_custom_on_attach,
---		capabilities = capabilities,
---	})
+	--	lspconfig[lsp].setup({
+	--		-- on_attach = my_custom_on_attach,
+	--		capabilities = capabilities,
+	--	})
 end
 
 -- luasnip setup
@@ -92,7 +75,7 @@ cmp.setup({
 	preselect = cmp.PreselectMode.None,
 })
 
-vim.api.nvim_create_user_command("Format", function () vim.lsp.buf.format() end, {})
+vim.api.nvim_create_user_command("Format", function() vim.lsp.buf.format() end, {})
 
 vim.cmd([[source ~/.config/nvim/xxx.vim]])
 

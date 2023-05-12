@@ -20,10 +20,14 @@ return {
 	},
 	{
 		"RRethy/vim-illuminate",
-		config = function (_, opts)
+		config = function(_, opts)
 			require("illuminate").configure(opts)
 		end,
 		opts = {},
-	}
+	},
+	{
+		'stevearc/dressing.nvim',
+		opts = {},
+	},
 
 }
