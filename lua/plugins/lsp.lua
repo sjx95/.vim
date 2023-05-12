@@ -1,5 +1,4 @@
 return {
-	{ "williamboman/mason.nvim", build = ":MasonUpdate", config = true },
 	{ "neovim/nvim-lspconfig" },
 	{
 		"williamboman/mason-lspconfig.nvim",
@@ -17,7 +16,7 @@ return {
 				"yamlls",
 				"clangd",
 				"gopls",
---				"golangci_lint_ls",
+				"golangci_lint_ls",
 				"tsserver",
 				"eslint",
 			},

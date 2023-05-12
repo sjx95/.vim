@@ -1,4 +1,7 @@
 return {
+
+	{ "williamboman/mason.nvim", build = ":MasonUpdate", opts = {} },
+
 	"vim-airline/vim-airline",
 	"vim-airline/vim-airline-themes",
 	"kien/ctrlp.vim",
