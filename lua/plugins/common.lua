@@ -1,14 +1,11 @@
 return {
 
-	{ "williamboman/mason.nvim", build = ":MasonUpdate", opts = {} },
-
-	"vim-airline/vim-airline",
-	"vim-airline/vim-airline-themes",
+	{ "williamboman/mason.nvim", opts = {}, build = ":MasonUpdate" },
+	{ 'stevearc/dressing.nvim',  opts = {} },
 	"tpope/vim-fugitive",
 	"kien/ctrlp.vim",
-	"junegunn/fzf",
-	"junegunn/fzf.vim",
-
+	{ "junegunn/fzf.vim",        dependencies = { "junegunn/fzf" } },
+	{ "vim-airline/vim-airline", dependencies = { "vim-airline/vim-airline-themes" } },
 	{
 		"nvim-neo-tree/neo-tree.nvim",
 		dependencies = {
@@ -17,6 +14,7 @@ return {
 			"MunifTanjim/nui.nvim",
 		},
 		opts = {},
+		lazy = false,
 		keys = {
 			{ "nt", "<CMD>Neotree toggle=true<CR>", desc = ":Neotree toggle=true" },
 			{ "nf", "<CMD>Neotree reveal=true<CR>", desc = ":Neotree reveal=true" },
@@ -30,4 +28,12 @@ return {
 			{ "tb", "<CMD>TagbarToggle<CR>", desc = "TagbarToggle" },
 		}
 	},
+	{
+		"RRethy/vim-illuminate",
+		config = function(_, opts)
+			require("illuminate").configure(opts)
+		end,
+		opts = {},
+	},
+
 }
