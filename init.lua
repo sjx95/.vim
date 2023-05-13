@@ -15,9 +15,12 @@ vim.opt.rtp:prepend(lazypath)
 -- load plugins
 require("lazy").setup({ "folke/lazy.nvim", { import = "plugins" } })
 
+-- basic vimL scripts
+vim.cmd("source " .. vim.fn.stdpath("config") .. "/config/fatih_default.vim")
+vim.cmd("source " .. vim.fn.stdpath("config") .. "/config/custom.vim")
 
-vim.api.nvim_create_user_command("Format", function() vim.lsp.buf.format() end, {})
-
-vim.cmd([[source ~/.config/nvim/xxx.vim]])
-
+-- lua scripts
 require('config.keymaps')
+
+-- others
+vim.api.nvim_create_user_command("Format", function() vim.lsp.buf.format() end, {})
