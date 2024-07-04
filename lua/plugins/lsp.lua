@@ -11,6 +11,7 @@ local mason_list = {
   "tsserver",
   "eslint",
   "bufls",
+  "thriftls",
 }
 
 local language_server_options = {

@@ -6,8 +6,10 @@ return {
       require('nvim-treesitter.configs').setup(opts)
     end,
     opts = {
-      ensure_installed = { "go", "lua" },
+      ensure_installed = { "lua", "vim", "vimdoc" },
+      auto_install = true,
       highlight = { enable = true },
+      indent = { enable = true },
     },
   },
 }

@@ -28,10 +28,16 @@ return {
   },
   {
     "RRethy/vim-illuminate",
-    config = function(_, opts)
-      require("illuminate").configure(opts)
-    end,
+    config = function(_, opts) require("illuminate").configure(opts) end,
     opts = {},
+  },
+  {
+    "lfv89/vim-interestingwords",
+    lazy = true,
+    keys = {
+      { "<leader>k", "<CMD>Interestingwords --toggle<CR>", desc = ":Interestingwords --toggle" },
+      { "<leader>K", "<CMD>Interestingwords --remove_all", desc = ":Interestingwords --remove_all" },
+    }
   },
 
 }
