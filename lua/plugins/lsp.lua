@@ -8,8 +8,6 @@ local mason_list = {
   "clangd",
   "gopls",
   "golangci_lint_ls",
-  "tsserver",
-  "eslint",
   "bufls",
   "thriftls",
 }
