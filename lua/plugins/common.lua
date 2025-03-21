@@ -11,7 +11,7 @@ return {
       "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
       "MunifTanjim/nui.nvim",
     },
-    opts = {},
+    opts = { filesystem = { use_libuv_file_watcher = true } },
     lazy = false,
     keys = {
       { "nt", "<CMD>Neotree toggle=true<CR>", desc = ":Neotree toggle=true" },
