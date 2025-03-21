@@ -8,13 +8,15 @@ local mason_list = {
   "clangd",
   "gopls",
   "golangci_lint_ls",
-  "bufls",
+  "buf_ls",
   "thriftls",
 }
 
 local language_server_options = {
   clangd = { filetypes = { "c", "cpp", "objc", "objcpp", "cuda" } }
 }
+
+local lspconfig_name_overwrite = {}
 
 return {
   "williamboman/mason-lspconfig.nvim",
@@ -26,10 +28,13 @@ return {
   opts = {
     ensure_installed = mason_list,
     handlers = {
-      function(server_name)
-        local opts = language_server_options[server_name] or {}
+      function(mason_server_name)
+        local lspconfig_name = lspconfig_name_overwrite[mason_server_name] or mason_server_name
+
+        local opts = language_server_options[mason_server_name] or {}
         opts['capabilities'] = require('cmp_nvim_lsp').default_capabilities()
-        require("lspconfig")[server_name].setup(opts)
+
+        require("lspconfig")[lspconfig_name].setup(opts)
       end,
     }
   },
