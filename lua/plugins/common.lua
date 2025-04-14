@@ -14,8 +14,8 @@ return {
     opts = { filesystem = { use_libuv_file_watcher = true } },
     lazy = false,
     keys = {
-      { "nt", "<CMD>Neotree toggle=true<CR>", desc = ":Neotree toggle=true" },
-      { "nf", "<CMD>Neotree reveal=true<CR>", desc = ":Neotree reveal=true" },
+      { "<leader>e", "<CMD>Neotree toggle=true<CR>", desc = ":Neotree toggle=true" },
+      { "<leader>E", "<CMD>Neotree reveal=true<CR>", desc = ":Neotree reveal=true" },
     },
   },
 

@@ -1,9 +1,13 @@
 local keys = {
-  { '<C-p>', '<CMD>Telescope find_files<CR>' },
-  { "gd",    '<CMD>Telescope lsp_definitions<CR>' },
-  { "gy",    '<CMD>Telescope lsp_type_definitions<CR>' },
-  { "gr",    '<CMD>Telescope lsp_references<CR>' },
-  { "gi",    '<CMD>Telescope lsp_implementations<CR>' },
+  { '<C-p>',      '<CMD>Telescope find_files<CR>' },
+  { '<leader>ff', '<CMD>Telescope find_files<CR>' },
+  { '<leader>fg', '<CMD>Telescope live_grep<CR>' },
+  { '<leader>fb', '<CMD>Telescope buffers<CR>' },
+  { '<leader>fh', '<CMD>Telescope help_tags<CR>' },
+  { "gd",         '<CMD>Telescope lsp_definitions<CR>' },
+  { "gy",         '<CMD>Telescope lsp_type_definitions<CR>' },
+  { "gr",         '<CMD>Telescope lsp_references<CR>' },
+  { "gi",         '<CMD>Telescope lsp_implementations<CR>' },
 }
 
 local opts = {
