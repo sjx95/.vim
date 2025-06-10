@@ -1,5 +1,5 @@
 return {
-  { "williamboman/mason.nvim", opts = {}, build = ":MasonUpdate" },
+  { "mason-org/mason.nvim",    opts = {},                                          build = ":MasonUpdate" },
   { 'stevearc/dressing.nvim',  opts = {} },
   "tpope/vim-fugitive",
   { "junegunn/fzf.vim",        dependencies = { "junegunn/fzf" } },
