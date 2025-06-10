@@ -1,5 +1,4 @@
 local keys = {
-  { '<C-p>',      '<CMD>Telescope find_files<CR>' },
   { '<leader>ff', '<CMD>Telescope find_files<CR>' },
   { '<leader>fg', '<CMD>Telescope live_grep<CR>' },
   { '<leader>fb', '<CMD>Telescope buffers<CR>' },
@@ -28,6 +27,7 @@ return {
     "sharkdp/fd",
     "nvim-treesitter/nvim-treesitter",
     "nvim-tree/nvim-web-devicons",
+    "nvim-telescope/telescope-fzf-native.nvim",
   },
   lazy         = false,
   keys         = keys,

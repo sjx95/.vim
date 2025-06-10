@@ -1,8 +1,7 @@
 return {
   { "mason-org/mason.nvim",    opts = {},                                          build = ":MasonUpdate" },
   { 'stevearc/dressing.nvim',  opts = {} },
-  "tpope/vim-fugitive",
-  { "junegunn/fzf.vim",        dependencies = { "junegunn/fzf" } },
+  { "tpope/vim-fugitive", },
   { "vim-airline/vim-airline", dependencies = { "vim-airline/vim-airline-themes" } },
   {
     "nvim-neo-tree/neo-tree.nvim",
@@ -18,7 +17,6 @@ return {
       { "<leader>E", "<CMD>Neotree reveal=true<CR>", desc = ":Neotree reveal=true" },
     },
   },
-
   {
     "preservim/tagbar",
     lazy = false,
@@ -36,7 +34,7 @@ return {
     lazy = true,
     keys = {
       { "<leader>k", "<CMD>Interestingwords --toggle<CR>", desc = ":Interestingwords --toggle" },
-      { "<leader>K", "<CMD>Interestingwords --remove_all", desc = ":Interestingwords --remove_all" },
+      { "<leader>K", "<CMD>Interestingwords --remove_all<CR>", desc = ":Interestingwords --remove_all" },
     }
   },
   {
