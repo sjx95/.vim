@@ -1,5 +1,5 @@
 -- Available server list at:
--- https://github.com/williamboman/mason-lspconfig.nvim#available-lsp-servers
+-- https://github.com/mason-org/mason-lspconfig.nvim#available-lsp-servers
 local mason_list = {
   "vimls",
   "lua_ls",
@@ -19,9 +19,9 @@ local language_server_options = {
 local lspconfig_name_overwrite = {}
 
 return {
-  "williamboman/mason-lspconfig.nvim",
+  "mason-org/mason-lspconfig.nvim",
   dependencies = {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     "neovim/nvim-lspconfig",
     "hrsh7th/cmp-nvim-lsp",
   },

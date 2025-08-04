@@ -7,7 +7,7 @@ local mason_list = {
 return {
   {
     "jay-babu/mason-null-ls.nvim",
-    dependencies = { "williamboman/mason.nvim" },
+    dependencies = { "mason-org/mason.nvim" },
     opts = {
       ensure_installed = mason_list,
       handlers = {
