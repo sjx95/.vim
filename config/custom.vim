@@ -11,6 +11,7 @@ autocmd FileType c,cpp,proto setlocal et sta sw=2 sts=2
 autocmd FileType javascript,typescript,javascriptreact,typescriptreact
 			\ setlocal et sta sw=2 sts=2
 
-" fold settings
-set foldmethod=syntax
+" folding
+set foldmethod=expr
+set foldexpr=v:lua.vim.treesitter.foldexpr()
 set foldlevelstart=99
