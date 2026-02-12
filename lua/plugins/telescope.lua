@@ -5,8 +5,9 @@ local keys = {
   { '<leader>fh', '<CMD>Telescope help_tags<CR>' },
   { "gd",         '<CMD>Telescope lsp_definitions<CR>' },
   { "gy",         '<CMD>Telescope lsp_type_definitions<CR>' },
-  { "gr",         '<CMD>Telescope lsp_references<CR>' },
-  { "gi",         '<CMD>Telescope lsp_implementations<CR>' },
+  { "gR",         '<CMD>Telescope lsp_references<CR>' },
+  { "gr",         "<CMD>lua require('telescope.builtin').lsp_references({file_ignore_patterns = { \"%_test.go\" } })<CR>" },
+  { "gI",         '<CMD>Telescope lsp_implementations<CR>' },
 }
 
 local opts = {
