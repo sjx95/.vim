@@ -3,6 +3,7 @@ return {
   { 'stevearc/dressing.nvim',  opts = {} },
   { "tpope/vim-fugitive", },
   { "vim-airline/vim-airline", dependencies = { "vim-airline/vim-airline-themes" } },
+  { 'akinsho/bufferline.nvim', dependencies = 'nvim-tree/nvim-web-devicons',       opts = {} },
   {
     "nvim-neo-tree/neo-tree.nvim",
     dependencies = {
@@ -33,7 +34,7 @@ return {
     "lfv89/vim-interestingwords",
     lazy = true,
     keys = {
-      { "<leader>k", "<CMD>Interestingwords --toggle<CR>", desc = ":Interestingwords --toggle" },
+      { "<leader>k", "<CMD>Interestingwords --toggle<CR>",     desc = ":Interestingwords --toggle" },
       { "<leader>K", "<CMD>Interestingwords --remove_all<CR>", desc = ":Interestingwords --remove_all" },
     }
   },
