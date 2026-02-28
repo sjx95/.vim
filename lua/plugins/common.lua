@@ -1,7 +1,6 @@
 return {
   { "mason-org/mason.nvim",    opts = {},                                          build = ":MasonUpdate" },
   { 'stevearc/dressing.nvim',  opts = {} },
-  { "tpope/vim-fugitive", },
   { "vim-airline/vim-airline", dependencies = { "vim-airline/vim-airline-themes" } },
   { 'akinsho/bufferline.nvim', dependencies = 'nvim-tree/nvim-web-devicons',       opts = {} },
   {
