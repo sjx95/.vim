@@ -1,8 +1,6 @@
 return {
-  { "mason-org/mason.nvim",    opts = {},                                          build = ":MasonUpdate" },
-  { 'stevearc/dressing.nvim',  opts = {} },
-  { "vim-airline/vim-airline", dependencies = { "vim-airline/vim-airline-themes" } },
-  { 'akinsho/bufferline.nvim', dependencies = 'nvim-tree/nvim-web-devicons',       opts = {} },
+  { "mason-org/mason.nvim",   opts = {}, build = ":MasonUpdate" },
+  { 'stevearc/dressing.nvim', opts = {} },
   {
     "nvim-neo-tree/neo-tree.nvim",
     dependencies = {
@@ -40,9 +38,7 @@ return {
   {
     "folke/persistence.nvim",
     event = "BufReadPre", -- this will only start session saving when an actual file was opened
-    opts = {
-      -- add any custom options here
-    },
+    opts = {},
     keys = {
       { "<leader>qs", function() require("persistence").load() end,                desc = "load the session for the current directory" },
       { "<leader>qS", function() require("persistence").select() end,              desc = "select a session to load" },
