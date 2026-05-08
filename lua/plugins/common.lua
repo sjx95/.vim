@@ -1,4 +1,5 @@
-return {
+---@type LazyPluginSpec[]
+local M = {
   { "mason-org/mason.nvim",   opts = {}, build = ":MasonUpdate" },
   { 'stevearc/dressing.nvim', opts = {} },
   {
@@ -47,3 +48,5 @@ return {
     }
   }
 }
+
+return M

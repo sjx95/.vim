@@ -1,3 +1,4 @@
+---@type LazyKeysSpec[]
 local dap_keymaps = {
   { "<leader>db", function() require("dap").toggle_breakpoint() end,                                    desc = "toggle [d]ebug [b]reakpoint" },
   { "<leader>dB", function() require("dap").set_breakpoint(vim.fn.input("Breakpoint condition: ")) end, desc = "[d]ebug [B]reakpoint" },
@@ -18,6 +19,7 @@ local dap_keymaps = {
   { "<leader>dw", function() require("dap.ui.widgets").hover() end,                                     desc = "[d]ebug [w]idgets" },
 }
 
+---@type LazyKeysSpec[]
 local dapui_keys = {
   { "<leader>du", function() require("dapui").toggle({}) end, desc = "[d]ap [u]i" },
   { "<leader>de", function() require("dapui").eval() end,     desc = "[d]ap [e]val" },
