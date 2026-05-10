@@ -4,11 +4,14 @@ local M = {
   { 'stevearc/dressing.nvim', opts = {} },
   {
     "nvim-neo-tree/neo-tree.nvim",
+    checkout = 'v3.x',
     dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
       "MunifTanjim/nui.nvim",
     },
+    ---@module 'neo-tree'
+    ---@type neotree.Config
     opts = { filesystem = { use_libuv_file_watcher = true } },
     lazy = false,
     keys = {
@@ -35,6 +38,10 @@ local M = {
       { "<leader>k", "<CMD>Interestingwords --toggle<CR>",     desc = ":Interestingwords --toggle" },
       { "<leader>K", "<CMD>Interestingwords --remove_all<CR>", desc = ":Interestingwords --remove_all" },
     }
+  },
+  {
+    'numToStr/Comment.nvim',
+    opts = {},
   },
   {
     "folke/persistence.nvim",
