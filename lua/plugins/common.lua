@@ -20,13 +20,6 @@ local M = {
     },
   },
   {
-    "preservim/tagbar",
-    lazy = false,
-    keys = {
-      { "tb", "<CMD>TagbarToggle<CR>", desc = ":TagbarToggle" },
-    }
-  },
-  {
     "RRethy/vim-illuminate",
     config = function(_, opts) require("illuminate").configure(opts) end,
     opts = {},
