@@ -1,7 +1,10 @@
 -- Available server list at:
 -- https://github.com/mason-org/mason-lspconfig.nvim#available-lsp-servers
 local mason_list = {
-  "vimls", "lua_ls", "bashls", "jsonls", "clangd", "gopls", "golangci_lint_ls", "buf_ls", "thriftls",
+  "vimls", "lua_ls", "bashls",
+  "jsonls", "yamlls",
+  "clangd", "gopls", "golangci_lint_ls", "pyright", "ts_ls", "eslint",
+  "buf_ls", "thriftls",
 }
 
 local language_server_options = {
