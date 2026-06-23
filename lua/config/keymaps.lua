@@ -1,8 +1,6 @@
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 vim.keymap.set("n", "<space>e", vim.diagnostic.open_float)
-vim.keymap.set("n", "[g", function() vim.diagnostic.jump({ count = -1, float = true, }) end)
-vim.keymap.set("n", "]g", function() vim.diagnostic.jump({ count = 1, float = true, }) end)
 vim.keymap.set("n", "<space>q", vim.diagnostic.setloclist)
 
 -- Use LspAttach autocommand to only map the following keys

@@ -1,3 +1,4 @@
+---@type LazyPluginSpec[]
 return {
   {
     "nvim-lualine/lualine.nvim",
@@ -6,6 +7,7 @@ return {
       options = {
         section_separators = '',
         component_separators = '|',
+        globalstatus = true,
       },
       sections = {
         lualine_c = {
@@ -20,6 +22,7 @@ return {
   },
   {
     'akinsho/bufferline.nvim',
+    enabled = false,
     dependencies = 'nvim-tree/nvim-web-devicons',
     opts = {},
   },
