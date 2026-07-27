@@ -1,5 +1,5 @@
+--- @type LazyPluginSpec[]
 return {
-  -- { "tpope/vim-fugitive", },
   {
     "kdheepak/lazygit.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
@@ -13,6 +13,11 @@ return {
   },
   {
     "lewis6991/gitsigns.nvim",
+    lazy = false,
     opts = {},
+    keys = {
+      { "[c", "<cmd>Gitsigns prev_hunk<cr>", desc = "prev_hunk" },
+      { "]c", "<cmd>Gitsigns next_hunk<cr>", desc = "next_hunk" },
+    },
   },
 }
