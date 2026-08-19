@@ -28,3 +28,14 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set("n", "<leader>cf", vim.lsp.buf.format, opts)
   end,
 })
+
+-- Shortcut to generate position string and copy to clipboard
+vim.keymap.set("n", "<leader>yl", function()
+  local file = vim.fn.expand("%:.")
+  local line = vim.fn.line(".")
+  local col = vim.fn.col(".")
+  local location = string.format("%s:%d:%d", file, line, col)
+
+  vim.fn.setreg("+", location)
+  vim.notify("Copied: " .. location)
+end, { desc = "Yank location" })
