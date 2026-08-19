@@ -1,6 +1,15 @@
+---@type LazyKeysSpec[]
 local keys = {
   { '<leader>ff', '<CMD>Telescope find_files<CR>' },
-  { '<leader>fg', '<CMD>Telescope live_grep<CR>' },
+  { '<leader>fg', function()
+    require('telescope.builtin').live_grep({
+      additional_args = {
+        '--glob', '!openspec/**',
+        '--glob', '!*_test.go',
+      },
+    })
+  end, },
+  { '<leader>fG', '<CMD>Telescope live_grep<CR>' },
   { '<leader>fb', '<CMD>Telescope buffers<CR>' },
   { '<leader>fh', '<CMD>Telescope help_tags<CR>' },
   { "gd",         '<CMD>Telescope lsp_definitions<CR>' },
@@ -20,7 +29,8 @@ local opts = {
   },
 }
 
-return {
+---@type LazyPluginSpec[]
+return { {
   "nvim-telescope/telescope.nvim",
   dependencies = {
     "nvim-lua/plenary.nvim",
@@ -33,4 +43,4 @@ return {
   lazy         = false,
   keys         = keys,
   opts         = opts,
-}
+} }
