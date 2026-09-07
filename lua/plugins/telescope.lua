@@ -26,7 +26,11 @@ local opts = {
   },
   pickers = {
     lsp_references = { fname_width = 0.5 },
-  },
+    buffers = {
+      initial_mode = "normal",
+      mappings = { n = { ["dd"] = "delete_buffer", }, },
+    },
+  }
 }
 
 ---@type LazyPluginSpec[]
