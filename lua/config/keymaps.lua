@@ -29,13 +29,36 @@ vim.api.nvim_create_autocmd("LspAttach", {
   end,
 })
 
--- Shortcut to generate position string and copy to clipboard
-vim.keymap.set("n", "<leader>yl", function()
+-- Copy a location or Visual range in OpenCode's file:Lline:Ccolumn format.
+vim.keymap.set({ "n", "x" }, "<leader>yl", function()
   local file = vim.fn.expand("%:.")
-  local line = vim.fn.line(".")
-  local col = vim.fn.col(".")
-  local location = string.format("%s:%d:%d", file, line, col)
+  if file == "" then
+    vim.notify("No file name to copy", vim.log.levels.WARN)
+    return
+  end
+
+  local mode = vim.fn.mode()
+  local to = { vim.fn.line("."), vim.fn.col(".") }
+  local location = string.format("%s:L%d:C%d", file, to[1], to[2])
+  if mode == "v" or mode == "V" or mode == "\22" then
+    -- Read the live selection, not marks from a previous Visual selection.
+    local from = { vim.fn.line("v"), vim.fn.col("v") }
+    if from[1] > to[1] or (from[1] == to[1] and from[2] > to[2]) then
+      from, to = to, from
+    end
+
+    if mode == "V" then
+      location = string.format("%s:L%d-L%d", file, from[1], to[1])
+    else
+      -- A block selection is represented by its top-left/bottom-right bounds.
+      if mode == "\22" and from[2] > to[2] then
+        from[2], to[2] = to[2], from[2]
+      end
+      location = string.format("%s:L%d:C%d-L%d:C%d", file, from[1], from[2], to[1], to[2])
+    end
+    vim.cmd.normal({ "\27", bang = true })
+  end
 
   vim.fn.setreg("+", location)
   vim.notify("Copied: " .. location)
-end, { desc = "Yank location" })
+end, { desc = "Yank location or selected range" })
